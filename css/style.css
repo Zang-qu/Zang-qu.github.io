@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #fdf1e2;
+  }
+  
+  .header .banner {
+    position: relative;
+    overflow: hidden; /* 避免伪元素超出范围 */
+  }
+  
+  .header .banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .header .banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* 半透明黑色 */
+    z-index: 1;
+  }
+  .banner-text {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: white;
+    z-index: 2;  /* 高于蒙版 */
+  }
+  
+  .banner-text h1 {
+    font-size: 30px;
+    /* margin: 0; */
+  }
+  
+  .slogan {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    text-align: right;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 250px;
+    z-index: 2;  /* 高于蒙版 */
+  }
+  
+  .navbar {
+    background-color: #7c1314;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar input {
+    margin-left: auto;
+    padding: 5px;
+  }
+  
+  .navbar .user {
+    margin-left: 10px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .slider {
+    width: 50%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+  }
+  
+  .slider img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .slider p {
+    font-size: 14px;
+    color: #003366;
+    margin-top: 10px;
+  }
+  .map-box {
+    width: 45%;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* .news-bar {
+  display: flex;
+  align-items: center;
+  background: url("zang-web/assets/news-bg.png") no-repeat left center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+  }
+  .news-bar h3 {
+    font-size: 20px;
+    margin: 0 20px 0 0;
+    font-weight: bold;
+  }
+  
+  .news-bar ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: disc;
+    background-color: rgba(0, 45, 85, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .news-bar li {
+    margin: 5px 0;
+  } */
+  .news-bar {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: fit-content;
+    background-color: #fff;
+  }
+  
+  .news-left {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    flex-shrink: 0;
+    overflow: hidden; /* 防止溢出 */
+  }
+  /* ✅ 加入蒙版 */
+  .news-left::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* 等同于 top/left/right/bottom: 0 */
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色 */
+    z-index: 1;
+  }
+  .news-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .news-left h3 {
+    position: absolute;
+    left: 35px;
+    bottom: 38px;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .news-right {
+    background-color: #054c7c;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .news-right ul {
+    list-style: disc;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2e3d3e;
+    color: white;
+    padding: 20px;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-col .icon {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 5px;
+  }
+  

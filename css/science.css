@@ -1,0 +1,167 @@
+/* 科普宣传页专用样式 */
+
+.science-page {
+    display: flex;
+    padding: 20px;
+    background-color: #fdf1e2;
+  }
+  
+  .sidebar {
+    width: 220px; /* ✅ 更宽一点，视觉比例一致 */
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    background-color: #3d565c; /* ✅ 整体底色保持一致 */
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    position: relative;
+    height: 200px;
+    background-color: #3d565c;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;                    /* ✅ 使用 Flex 居中 */
+    align-items: center;             /* ✅ 垂直居中 */
+    justify-content: center;         /* ✅ 水平居中 */
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar-item.active {
+    background-color: #004b80;
+    font-weight: bold;
+  }
+  
+  /* ✅ 右侧箭头仍然居中 */
+  .sidebar-item.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 20px solid #004b80;
+  }
+  
+
+  
+  
+  .main-videos {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* 主视频卡片 */
+  .main-video-card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+  
+  .main-video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 小视频卡片 */
+  .sub-videos {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .video-card {
+    position: relative;
+    flex: 1;
+    width: 90%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 视频遮罩 */
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  /* 播放按钮样式（统一大小） */
+  .play-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 视频信息栏，放在按钮下方水平排列 */
+  .video-info {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  
+  
+  
+  .history-section {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  .history-section h3 {
+    color: #054c7c;
+    margin-bottom: 10px;
+  }
+  
+  .history-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .history-list li {
+    background-color: #ccc8ae;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
